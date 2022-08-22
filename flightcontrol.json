@@ -20,12 +20,10 @@
         },
         {
           "id": "test-web",
-          "name": "Flight Deck",
+          "name": "Blitz App",
           "type": "fargate",
-          "domain": "app.flightcontrol.dev",
           "cpu": 1,
           "memory": 2,
-          "minInstances": 2,
           "maxInstances": 3,
           "buildCommand": "npm run build",
           "startCommand": "npm run start",
