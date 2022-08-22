@@ -2,6 +2,7 @@
   "environments": [
     {
       "id": "preview-environment",
+      "region": "us-west-1",
       "name": "Test preview environment",
       "source": {
         "pr": true,
