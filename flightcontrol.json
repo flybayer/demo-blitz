@@ -39,9 +39,7 @@
                 "value": "dbConnectionString"
               }
             },
-            "GROWTHBOOK_API_KEY": {
-              "fromParameterStore": "flightcontrol.growthbook.api.key"
-            }
+            "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
       ]
@@ -82,9 +80,7 @@
                 "value": "dbConnectionString"
               }
             },
-            "GROWTHBOOK_API_KEY": {
-              "fromParameterStore": "flightcontrol.growthbook.api.key"
-            }
+            "GROWTHBOOK_API_KEY": "fake-api-key"
           }
         }
       ]
