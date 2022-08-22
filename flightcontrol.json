@@ -1,0 +1,35 @@
+{
+  "environments": [
+    {
+      "id": "Test",
+      "name": "Test",
+      "region": "us-west-2",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "test-web",
+          "name": "Flight Deck",
+          "type": "fargate",
+          "domain": "app.flightcontrol.dev",
+          "cpu": 1,
+          "memory": 2,
+          "minInstances": 2,
+          "maxInstances": 3,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "envVariables": {
+            "APP_ENV": "staging",
+            "DATABASE_URL": {
+              "fromParameterStore": "flightcontrol.database.url.us.west.2"
+            },
+            "GROWTHBOOK_API_KEY": {
+              "fromParameterStore": "flightcontrol.growthbook.api.key"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
