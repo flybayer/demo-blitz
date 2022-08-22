@@ -9,6 +9,16 @@
       },
       "services": [
         {
+          "id": "db",
+          "name": "Database",
+          "type": "rds",
+          "engine": "postgres",
+          "engineVersion": "12",
+          "instanceSize": "db.t2.micro",
+          "storage": 20,
+          "private": false
+        },
+        {
           "id": "test-web",
           "name": "Flight Deck",
           "type": "fargate",
@@ -22,7 +32,10 @@
           "envVariables": {
             "APP_ENV": "staging",
             "DATABASE_URL": {
-              "fromParameterStore": "flightcontrol.database.url.us.west.2"
+              "fromService": {
+                "id": "db",
+                "value": "dbConnectionString"
+              }
             },
             "GROWTHBOOK_API_KEY": {
               "fromParameterStore": "flightcontrol.growthbook.api.key"
