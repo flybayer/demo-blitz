@@ -16,7 +16,8 @@
           "engineVersion": "12",
           "instanceSize": "db.t2.micro",
           "storage": 20,
-          "private": false
+          "private": false,
+          "connectionStringEnvVarName": "DATABASE_URL"
         },
         {
           "id": "test-web",
