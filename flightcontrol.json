@@ -362,7 +362,7 @@
           "id": "database",
           "name": "Database",
           "type": "rds",
-          "instanceSize": "db.t4g.micro",
+          "instanceSize": "db.t3.micro",
           "private": false,
           "storage": 20,
           "maxStorage": 100,
